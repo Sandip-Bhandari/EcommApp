@@ -1,7 +1,7 @@
 let express = require("express");
 let productRouter = express.Router();
 let productController = require("../controller/product.controller");
-// let authJwt = require("./../middlewares/authJwt");
+let authJwt = require("./../middlewares/authJwt");
 
 productRouter.get("/", [authJwt.VerifyToken], productController.getAllProducts);
 productRouter.get("/:productId", productController.getProductById);
