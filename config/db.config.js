@@ -1,7 +1,7 @@
 const developmentInstance = {
   DB: "ecomm_db",
   USER: "root",
-  PASSWORD: "Relevel@123",
+  PASSWORD: "SSSSSSSS",
   HOST: "localhost",
   dialect: "mysql",
   pool: {
@@ -15,7 +15,7 @@ const developmentInstance = {
 const testInstance = {
   DB: "ecomm_test_db",
   USER: "root",
-  PASSWORD: "Relevel@123",
+  PASSWORD: "SSSSSSSS",
   HOST: "localhost",
   dialect: "mysql",
   pool: {

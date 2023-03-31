@@ -1,9 +1,11 @@
-let express = require('express');
-let productRoutes = express.Router();
-let productController = require("../controller/product.controller")
+let express = require("express");
+let productRouter = express.Router();
+let productController = require("../controller/product.controller");
+// let authJwt = require("./../middlewares/authJwt");
 
-productRoutes.get("/", productController.getAllProducts);
+productRouter.get("/", [authJwt.VerifyToken], productController.getAllProducts);
+productRouter.get("/:productId", productController.getProductById);
 
-productRoutes.get("/:productId", productController.gerProductById );
+productRouter.post("/", productController.insertProducts);
 
-module.exports = productRoutes;
+module.exports = productRouter;
